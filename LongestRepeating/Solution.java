@@ -7,11 +7,9 @@ class Solution {
         int i = 0;
         int biggestCount = 0;
 
-        if (s == null || s.length() == 0 || k <= 0 || k >= 100000) return 0;
+        if (s == null || s.length() == 0 || k < 0 || k >= 100000) return 0;
         HashMap<Character, Integer> bag = new HashMap<>();
         
-
-
         while (i < s.length()){
             char c = s.charAt(i);            
             
@@ -42,6 +40,6 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println(s.characterReplacement("RETCCC", 2));
+        System.out.println(s.characterReplacement("AAAA", 0));
     }
 }
